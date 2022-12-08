@@ -63,10 +63,11 @@ def add_bg_from_local(image_file):
         margin-top: 10px;
         opacity: 0.8;
             }}
+            
     #picture {{
         background-color: white;
         color: black;
-        font-size: 100px;
+        font-size: 50px;
         opacity: 0.8;
         font-family: sans serif arvo;
         border-collapse: separate;
@@ -75,6 +76,14 @@ def add_bg_from_local(image_file):
         opacity: 0.8;
         background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(10,10,10,0.05))
     }}
+    
+    #predicted {{
+            font-family:sans serif arvo;
+            color:red;
+            font-size:60px;
+            text-align:center;
+            }}
+            
     #aditional_information {{
         font-size:30px;
         text-align: center;
@@ -139,7 +148,7 @@ if button and uploaded_file is not None:
 
         predicted_genus = max(genuses, key=genuses.get)
         
-        st.markdown(f'<p style="font-family:sans serif arvo;color:red;font-size:200px;">{predicted_genus}</p>',unsafe_allow_html=True)
+        st.markdown(f'<div id="predicted">{predicted_genus}</div>',unsafe_allow_html=True)
         
 
         with st.expander("see additional information"):
