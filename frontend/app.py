@@ -7,7 +7,6 @@ import io
 from PIL import Image
 from data import all_mushroom_tables, all_info_tables
 import os
-from pathlib import Path
 
 
 st.set_page_config(layout="wide", page_title= "FungAI", page_icon = ":shark:")
@@ -102,13 +101,6 @@ def add_bg_from_local(image_file):
 add_bg_from_local('/app/fungai_frontend/frontend/images_for_app/background2.jpg')
 
 
-path = Path('/app/fungai_frontend/frontend/images_for_app/')
-paths = []
-for p in path.iterdir():
-    paths.append(str(p))
-st.write(str(paths))
-
-
 # This is creating the picture upload button
 uploaded_file = st.file_uploader("Choose a file")
 button = False
@@ -154,7 +146,7 @@ if button and uploaded_file is not None:
 
 
         col1, col2, col3 = st.columns(3)
-        dir_gens = f'images_for_app/Genus pictures/{predicted_genus}'
+        dir_gens = f'/app/fungai_frontend/frontend/images_for_app/Genus pictures/{predicted_genus}'
         images = os.listdir(dir_gens)
 
         with col1:
@@ -182,7 +174,7 @@ if button and uploaded_file is not None:
         # recipes_button = st.button("Reveal recipes")
         # choices = st.radio( "Which recipes do u want?" )
         col1, col2 = st.columns(2)
-        dir_recs = f'images_for_app/Recipe images/{predicted_genus}'
+        dir_recs = f'/app/fungai_frontend/frontend/images_for_app/Recipe images/{predicted_genus}'
         images = [img for img in os.listdir(dir_recs) if not img.startswith(".DS")]
 
         with col1:
