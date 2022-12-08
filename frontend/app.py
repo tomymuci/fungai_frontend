@@ -82,6 +82,10 @@ def add_bg_from_local(image_file):
             color:red;
             font-size:60px;
             text-align:center;
+            background-color: white;
+            opacity: 0.8;
+            border-collapse: separate;
+            border-spacing: 15px 15px;
             }}
             
     #aditional_information {{
@@ -148,7 +152,7 @@ if button and uploaded_file is not None:
 
         predicted_genus = max(genuses, key=genuses.get)
         
-        st.markdown(f'<div id="predicted">{predicted_genus}</div>',unsafe_allow_html=True)
+        st.markdown(f'<div id="predicted">Predicted Genus: {predicted_genus}</div>',unsafe_allow_html=True)
         
 
         with st.expander("see additional information"):
