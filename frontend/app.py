@@ -101,7 +101,12 @@ def add_bg_from_local(image_file):
     )
 #add_bg_from_local('images_for_app/background2.jpg')
 
-st.write(Path(__file__).as_posix())
+
+path = Path('/app/fungai_frontend/frontend/images_for_app/')
+paths = []
+for p in path.iterdir():
+    paths.append(str(p))
+st.write(str(paths))
 
 
 # This is creating the picture upload button
