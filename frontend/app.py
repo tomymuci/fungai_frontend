@@ -66,7 +66,7 @@ def add_bg_from_local(image_file):
     #picture {{
         background-color: white;
         color: black;
-        font-size: 20 px;
+        font-size: 40 px;
         opacity: 0.8;
         font-family: sans serif arvo;
         border-collapse: separate;
@@ -136,7 +136,7 @@ if button and uploaded_file is not None:
 
         predicted_genus = max(genuses, key=genuses.get)
         
-        st.markdown(f'<p style="font-family:sans serif arvo; font-size: 50px;">{predicted_genus}</p>',unsafe_allow_html=True)
+        st.markdown(f'<p style="font-family:sans serif arvo; color: "red"; font-size: 50px;">{predicted_genus}</p>',unsafe_allow_html=True)
 
         
 
