@@ -66,7 +66,7 @@ def add_bg_from_local(image_file):
     #picture {{
         background-color: white;
         color: black;
-        font-size: 40 px;
+        font-size: 100px;
         opacity: 0.8;
         font-family: sans serif arvo;
         border-collapse: separate;
@@ -139,7 +139,7 @@ if button and uploaded_file is not None:
 
         predicted_genus = max(genuses, key=genuses.get)
         
-        st.markdown(f'<p style="font-family:sans serif arvo; color: "red"; font-size: 200px;">{predicted_genus}</p>',unsafe_allow_html=True)
+        st.markdown(f'<p style="font-family:sans serif arvo;color:red;font-size:200px;">{predicted_genus}</p>',unsafe_allow_html=True)
         
 
         with st.expander("see additional information"):
@@ -164,7 +164,7 @@ if button and uploaded_file is not None:
             image_name = images[1].replace('.jpeg', '').replace('_', ' ').title()
             st.markdown(f"""<div id="examples"> {image_name} </div>""" , unsafe_allow_html = True)
             image1 = Image.open(os.path.join(dir_gens, images[1]))
-            st.image(image1, use_column_width=True)
+            st.image(image1, width=250)
         with col3:
             image_name = images[2].replace('.jpeg', '').replace('_', ' ').title()
             st.markdown(f"""<div id="examples"> {image_name} </div>""" , unsafe_allow_html = True)
