@@ -7,6 +7,7 @@ import io
 from PIL import Image
 from data import all_mushroom_tables, all_info_tables
 import os
+from pathlib import Path
 
 
 st.set_page_config(layout="wide", page_title= "FungAI", page_icon = ":shark:")
@@ -100,7 +101,7 @@ def add_bg_from_local(image_file):
     )
 #add_bg_from_local('images_for_app/background2.jpg')
 
-
+print(Path(__file__))
 
 
 # This is creating the picture upload button
