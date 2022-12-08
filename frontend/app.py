@@ -135,7 +135,10 @@ if button and uploaded_file is not None:
         genuses = response.json()["genuses"]
 
         predicted_genus = max(genuses, key=genuses.get)
-        st.write(f'{predicted_genus}')
+        
+        st.markdown(f'<p style="font-family:Courier; color:Blue; font-size: 20px;">{predicted_genus}</p>',unsafe_allow_html=True)
+
+        
 
 
         with st.expander("see additional information"):
