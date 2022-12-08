@@ -115,7 +115,7 @@ if uploaded_file is not None:
     col1, col2, col3  = st.columns(3)
 
     with col2:
-        st.image(image, width=250)
+        st.image(image, use_column_width=True)
         #str_equivalent_image = base64.b64encode(img_buffer.getvalue()).decode()
         #img_tag = "<img src='data:image/png;base64," + str_equivalent_image + "'/>"
         #st.markdown(img_tag , unsafe_allow_html=True)
