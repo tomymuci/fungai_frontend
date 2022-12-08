@@ -137,10 +137,7 @@ if button and uploaded_file is not None:
         predicted_genus = max(genuses, key=genuses.get)
         
         st.markdown(f'<p style="font-family:sans serif arvo; color: "red"; font-size: 200px;">{predicted_genus}</p>',unsafe_allow_html=True)
-        st.markdown(f'<p style="font-family:sans serif arvo; color: "red"; <font size="+200">This is bigger text.</font>">{predicted_genus}</p>',unsafe_allow_html=True)
-
         
-
 
         with st.expander("see additional information"):
             #html_string = "<p>style=“background-color:#0066cc;color:#33ff33;font-size:24px;border-radius:2%;“</p>"
