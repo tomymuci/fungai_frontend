@@ -9,7 +9,7 @@ from data import all_mushroom_tables, all_info_tables
 import os
 
 
-st.set_page_config(layout="wide", page_title= "FungAI", page_icon = ":shark:")
+st.set_page_config(layout="wide", page_title= "FungAI", page_icon = ":mushroom:")
 
 
 # This is creating the headlines
