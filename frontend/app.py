@@ -99,7 +99,7 @@ def add_bg_from_local(image_file):
     """,
     unsafe_allow_html=True
     )
-#add_bg_from_local('images_for_app/background2.jpg')
+add_bg_from_local('/app/fungai_frontend/frontend/images_for_app/background2.jpg')
 
 
 path = Path('/app/fungai_frontend/frontend/images_for_app/')
