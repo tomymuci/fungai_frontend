@@ -101,7 +101,7 @@ def add_bg_from_local(image_file):
     )
 #add_bg_from_local('images_for_app/background2.jpg')
 
-print(Path(__file__))
+st.write(Path(__file__).as_posix())
 
 
 # This is creating the picture upload button
