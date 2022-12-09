@@ -174,10 +174,10 @@ if button and uploaded_file is not None:
             st.image(image1, use_column_width=True)
 
         with col2:
-            image_name = images[1].replace('.jpeg', '').replace('_', ' ').title()
+            image_name = images[3].replace('.jpeg', '').replace('_', ' ').title()
             st.markdown(f"""<div id="examples"> {image_name} </div>""" , unsafe_allow_html = True)
             image1 = Image.open(os.path.join(dir_gens, images[1]))
-            st.image(image1, width=250)
+            st.image(image1, use_column_width=True)
         with col3:
             image_name = images[2].replace('.jpeg', '').replace('_', ' ').title()
             st.markdown(f"""<div id="examples"> {image_name} </div>""" , unsafe_allow_html = True)
