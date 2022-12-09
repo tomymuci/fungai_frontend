@@ -174,9 +174,13 @@ if button and uploaded_file is not None:
             st.image(image1, use_column_width=True)
 
         with col2:
-            image_name = images[3].replace('.jpeg', '').replace('_', ' ').title()
+            if predicted_genus.lower() == 'boletus':
+                idx = 3
+            else:
+                idx = 1
+            image_name = images[idx].replace('.jpeg', '').replace('_', ' ').title()
             st.markdown(f"""<div id="examples"> {image_name} </div>""" , unsafe_allow_html = True)
-            image1 = Image.open(os.path.join(dir_gens, images[1]))
+            image1 = Image.open(os.path.join(dir_gens, images[idx]))
             st.image(image1, use_column_width=True)
         with col3:
             image_name = images[2].replace('.jpeg', '').replace('_', ' ').title()
